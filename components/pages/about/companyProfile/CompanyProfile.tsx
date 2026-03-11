@@ -1,20 +1,20 @@
 import { ChevronRight } from 'lucide-react'
 import './CompanyProfile.scss'
 import Image from 'next/image'
-// import profileImg from "../../../../public/images/about/companyProfile.jpg";
+import mainImg from "../../../../public/images/aboutImages/companyProfile.jpg";
 import { OUR_PAGES } from '../data/AboutData'
 import Link from 'next/link'
 
 const CompanyProfile = () => {
 	return (
-		<section id="profile">
+		<section id="profile"> 
 			<div className="container">
 				<div className="profile">
 					<div className="profile--route">
 						<h1>Company Profile</h1>
 						<div className="profile--route__location">
 							<h6>You are here:</h6>
-							<a>HomePage</a>
+							 <Link href={"/"}>HomePage</Link>
 							<span>
 								<ChevronRight />
 							</span>
@@ -23,7 +23,7 @@ const CompanyProfile = () => {
 					</div>
 					<div className="profile--data">
 						<div className="profile--data__mainData">
-							{/* <Image src={profileImg} alt="" /> */}
+							<Image src={mainImg} alt="" />
 							<h2>WHO ARE WE?</h2>
 							<div className="profile--data__mainData--description">
 								<h6>
