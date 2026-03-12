@@ -1,4 +1,5 @@
 import { CONTACT, QUICK_LINKS, SOCIALS } from '../data/FooterData'
+
 import styles from './Footer.module.scss'
 import Link from 'next/link'
 

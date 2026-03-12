@@ -1,6 +1,8 @@
-import LayoutSite from '@/components/layout/LayoutSite'
-import { Montserrat } from 'next/font/google'
 import type { Metadata } from 'next'
+import { Montserrat } from 'next/font/google'
+
+import LayoutSite from '@/components/layout/LayoutSite'
+
 import './globals.scss'
 
 const montserrat = Montserrat({
