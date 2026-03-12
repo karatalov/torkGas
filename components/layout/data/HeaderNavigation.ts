@@ -53,12 +53,6 @@ export const HEADER_NAVIGATION = [
 	},
 	{
 		id: 5,
-		title: 'HUMAN RESOURCES',
-		link: '/humanResources',
-		items: [],
-	},
-	{
-		id: 6,
 		title: 'OUR PRODUCTS',
 		link: '/ourProducts',
 		items: [
@@ -69,7 +63,7 @@ export const HEADER_NAVIGATION = [
 		],
 	},
 	{
-		id: 7,
+		id: 6,
 		title: 'COMMUNICATION',
 		link: '/communication',
 		items: [],

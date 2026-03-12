@@ -1,52 +1,57 @@
 'use client'
 
+import { ChevronDown, DROP_ICON, NAV_ICONS } from '../data/HeaderData'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { HEADER_NAVIGATION } from '../data/HeaderNavigation'
 import { usePathname } from 'next/navigation'
+
 import HeaderMainLogo from '@/public/images/headerMainLogo.png'
 import Image from 'next/image'
 import './Header.scss'
 
 export default function Header() {
 	const pathname = usePathname()
+
 	return (
 		<header id="header">
 			<div className="header">
 				<div className="header--top">
 					<div className="header--top__left">
 						<p>
-							<Phone /> +90 123 456 78 90
+							<Phone size={14} /> +90 544 407 77 87
 						</p>
 						<p>
-							<Mail /> info@tork_gas.com
+							<Mail size={14} /> info@torkgas.com
 						</p>
 					</div>
 					<div className="header--top__right">
 						<p>
-							<MapPin /> Istanbul, Turkey
+							<MapPin size={14} /> Istanbul, Turkey
 						</p>
 					</div>
 				</div>
+
 				<div className="header--center">
-					<Image src={HeaderMainLogo} alt="" width={150} height={100} />
+					<Image src={HeaderMainLogo} alt="Tork Gas" width={140} height={56} />
+
 					<div className="header--center__right">
 						<div className="header--center__right--call">
 							<div className="header--center__right--call__icons">
-								<Phone />
+								<Phone size={18} />
 							</div>
 							<div className="header--center__right--call__info">
 								<h4>Call Us</h4>
-								<p>+90 123 456 78 90</p>
+								<p>+90 544 407 77 87</p>
 							</div>
 						</div>
 
 						<div className="header--center__right--email">
 							<div className="header--center__right--email__icons">
-								<Mail />
+								<Mail size={18} />
 							</div>
 							<div className="header--center__right--email__info">
 								<h4>Email Us</h4>
-								<p>info@tork_gas.com</p>
+								<p>info@torkgas.com</p>
 							</div>
 						</div>
 					</div>
@@ -56,19 +61,25 @@ export default function Header() {
 					<nav className="header--bottom__menu">
 						{HEADER_NAVIGATION.map((item) => {
 							const isActive = pathname === item.link
+							const hasDropdown = item.items && item.items.length > 0
+
 							return (
 								<div key={item.id} className="header--bottom__menu--item">
 									<a
 										href={item.link}
 										className={`nav-link ${isActive ? 'active' : ''}`}
 									>
+										{NAV_ICONS[item.id]}
 										{item.title}
+										{hasDropdown && <ChevronDown />}
 									</a>
-									{item.items && item.items.length > 0 && (
+
+									{hasDropdown && (
 										<ul className="dropdown-menu">
-											{item.items.map((subItem, index) => (
-												<li key={index} className="dropdown-item">
+											{item.items!.map((subItem, idx) => (
+												<li key={idx} className="dropdown-item">
 													<a href={subItem.link} className="dropdown-link">
+														{DROP_ICON}
 														{subItem.title}
 													</a>
 												</li>
