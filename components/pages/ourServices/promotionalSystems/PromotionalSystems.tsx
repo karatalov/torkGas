@@ -1,5 +1,5 @@
 import React from "react";
-import "./PromotionalSystems.scss";
+import "./promotionalSystems.scss";
 import Image from "next/image";
 import automationPanels from "@/public/images/ourServices/Promotional.jpg";
 import { ChevronRight, Link } from "lucide-react";
