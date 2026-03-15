@@ -1,11 +1,10 @@
 'use client'
-
 import { ChevronDown, DROP_ICON, NAV_ICONS } from '../data/HeaderData'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { HEADER_NAVIGATION } from '../data/HeaderNavigation'
 import { usePathname } from 'next/navigation'
 
-import HeaderMainLogo from '@/public/images/headerMainLogo.png'
+import HeaderMainLogo from '@/public/images/headerImages/headerMainLogo.svg'
 import Image from 'next/image'
 import './Header.scss'
 
@@ -25,6 +24,7 @@ export default function Header() {
 						</p>
 					</div>
 					<div className="header--top__right">
+						<p>Elektronik ve Otomasyon</p>
 						<p>
 							<MapPin size={14} /> Istanbul, Turkey
 						</p>
@@ -32,7 +32,7 @@ export default function Header() {
 				</div>
 
 				<div className="header--center">
-					<Image src={HeaderMainLogo} alt="Tork Gas" width={140} height={56} />
+					<Image src={HeaderMainLogo} alt="Tork Gas" />
 
 					<div className="header--center__right">
 						<div className="header--center__right--call">
