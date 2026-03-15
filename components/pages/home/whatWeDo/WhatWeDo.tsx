@@ -18,7 +18,7 @@ export default function WhatWeDo() {
 						setVisible((prev) => Array.from(new Set([...prev, i])))
 						obs.disconnect()
 					}
-				},
+				}, 
 				{ threshold: 0.15 },
 			)
 

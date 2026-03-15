@@ -10,7 +10,7 @@ const Hero = () => {
 					<h1>
 						Powering the Future <br /> with <span>Natural Gas</span>
 					</h1>
-					<p>
+					<p> 
 						Tork Gas delivers reliable natural gas infrastructure, automation
 						systems, and industrial solutions across Turkey.
 					</p>
