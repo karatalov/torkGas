@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import styles from './WhatWeDo.module.scss'
 import { CARDS } from '../data/whatWeDo'
+
+import styles from './WhatWeDo.module.scss'
 
 export default function WhatWeDo() {
 	const cardRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -19,7 +20,7 @@ export default function WhatWeDo() {
 						obs.disconnect()
 					}
 				},
-				{ threshold: 0.15 },
+				{ threshold: 0.45 },
 			)
 
 			obs.observe(ref)

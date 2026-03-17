@@ -1,36 +1,72 @@
 .card {
   width: 230px;
-  height: auto;
-  padding-bottom: 20px;
+  padding: 28px 20px 32px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
-  background: rgba(128, 128, 128, 0.107);
-  border-radius: 5px;
+  gap: 14px;
+
+  background: #fff;
+  border-radius: 16px;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+  }
+
   img {
     width: 100%;
     height: 200px;
-    transition: 0.5s ease-in-out;
+    object-fit: cover;
+    border-radius: 10px;
+
+    transition: transform 0.5s ease;
   }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
   h2 {
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.5s ease-in-out;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+
+    transition: color 0.3s ease;
+
     &:hover {
-      color: gray;
+      color: #3d52d5;
     }
   }
+
   button {
-    background: #ffc107;
-    width: 150px;
-    height: 40px;
+    width: 160px;
+    height: 42px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: #3d52d5;
     color: white;
-    border-radius: 5px;
+
+    font-weight: 600;
+    font-size: 14px;
+
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+
     &:hover {
-      background: gray;
+      background: #2f41b8;
       transform: scale(1.05);
     }
   }

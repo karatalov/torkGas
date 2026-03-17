@@ -1,5 +1,11 @@
-import ProductDetail from "@/components/ui/ProductDetail";
+import ProductDetail from '@/components/ui/ProductDetail'
 
-export default function Page({ params }: { params: { id: string } }) {
-  return <ProductDetail params={params} />;
+export default async function Page({
+	params,
+}: {
+	params: Promise<{ id: string }>
+}) {
+	const resolvedParams = await params
+
+	return <ProductDetail params={resolvedParams} />
 }
